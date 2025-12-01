@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Family Sacco{% endblock %}
+
+{% block content %}
+<div class="p-4 bg-white shadow rounded">
+    <h2>Welcome to the Dashboard</h2>
+    <p>Your content goes here...</p>
+    <!-- Even if this is just one line, footer stays at bottom! -->
+</div>
+<div>hello from here</div>
+<div class="row g-4">
+<!-- Savings Account -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm border-0 hover-shadow transition">
+                <div class="card-body text-center p-4">
+                    <div class="bg-success text-white rounded-circle mx-auto mb-4 d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                        <i class="bi bi-piggy-bank fs-1"></i>
+                    </div>
+                    <h4 class="card-title">Savings Account</h4>
+                    <p class="card-text text-muted">Grow your money safely with attractive interest rates. Regular savings build your future.</p>
+                    <a href="#" class="btn btn-outline-success mt-3">Open Savings →</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm border-0 hover-shadow transition">
+                <div class="card-body text-center p-4">
+                    <div class="bg-warning text-dark rounded-circle mx-auto mb-4 d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                        <i class="bi bi-cash-stack fs-1"></i>
+                    </div>
+                    <h4 class="card-title">Instant Loans</h4>
+                    <p class="card-text text-muted">Get quick loans up to 3x your savings at low interest rates. Emergency? School fees? We've got you.</p>
+                    <a href="#" class="btn btn-outline-warning mt-3">Apply for Loan →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm border-0 hover-shadow transition">
+                <div class="card-body text-center p-4">
+                    <div class="bg-info text-white rounded-circle mx-auto mb-4 d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                        <i class="bi bi-bar-chart-fill fs-1"></i>
+                    </div>
+                    <h4 class="card-title">Shares & Dividends</h4>
+                    <p class="card-text text-muted">Buy shares and earn annual dividends. The more you save, the more you own!</p>
+                    <a href="#" class="btn btn-outline-info mt-3">Buy Shares →</a>
+                </div>
+            </div>
+        </div>
+
+    </div>  
+
+    <div class="text-center my-5 py-5 bg-light rounded shadow">
+        <h2>Ready to Grow Your Wealth?</h2>
+        <p class="lead">Join over 5,000 happy members saving and growing together.</p>
+        <a href="{% url 'signup' %}" class="btn btn-success btn-lg">Become a Member Today</a>
+    </div>
+{% endblock %}
+

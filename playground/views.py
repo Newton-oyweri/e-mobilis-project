@@ -18,7 +18,7 @@ def login_view(request):
 
         if user is not None:
             login(request, user)
-            return redirect("student")   # redirect anywhere you want
+            return redirect("index")   # redirect anywhere you want
         else:
             messages.error(request, "Invalid username or password")
 
@@ -31,13 +31,13 @@ def signup(request):
         form = RegisterForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect("student")
+            return redirect("index")
     return render(request, "signup.html", {"form": form})
 
 
 
 def index(request):
-    return render(request, 'child.html')
+    return render(request, 'home.html')
 
 def logout_view(request):
     logout(request)
